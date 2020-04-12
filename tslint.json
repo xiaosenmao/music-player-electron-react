@@ -1,0 +1,16 @@
+{
+	"rules": {
+		"class-name": true,
+		"comment-format": [true, "check-space"],
+		"no-var-keyword": true,
+		"triple-equals": [true, "allow-null-check"],
+		"eofline": true,
+		"no-internal-module": true,
+		"no-inferrable-types": true,
+		"no-null-keyword": true
+	},
+	"jsRules": {
+		"triple-equals": [true, "allow-null-check"],
+		"eofline": true
+	}
+}

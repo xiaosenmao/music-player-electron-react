@@ -1,0 +1,16 @@
+# top-most EditorConfig file
+root = true
+
+# Apply for all files
+[*]
+charset = utf-8
+
+indent_style = tab
+indent_size = 2
+
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.json]
+indent_size = 4

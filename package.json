@@ -1,0 +1,89 @@
+{
+  "name": "music-react-electron",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "Web music player build by electron react",
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "cross-env prod=true webpack --config build/webpack.prod.js --colors",
+    "dev": "webpack-dev-server --config build/webpack.dev.js --colors",
+    "start": "concurrently \"wait-on http://localhost:8080 && electron .\" \"npm run dev\"",
+    "precommit": "lint-staged"
+  },
+  "keywords": [
+    "music",
+    "player",
+    "electron",
+    "react",
+    "typescript"
+  ],
+  "author": "xiaosenmao",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "@types/webpack": "^4.41.10",
+    "autoprefixer": "^9.7.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "lint-staged": "^10.1.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "ts-loader": "^6.2.2",
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3",
+    "url-loader": "^4.1.0",
+    "wait-on": "^4.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "electron": "^8.2.1",
+    "electron-is-dev": "^1.1.0",
+    "electron-store": "^5.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie <= 8",
+    "last 2 versions",
+    "> 1%",
+    "iOS >= 7",
+    "Android >= 4.0"
+  ],
+  "lint-staged": {
+    "linters": {
+      "*.json": [
+        "prettier --write",
+        "git add"
+      ],
+      "*.{js,ts,tsx}": [
+        "tslint --fix",
+        "prettier --write",
+        "git add"
+      ],
+      "*.{scss,css}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "*.min.js",
+      "*.min.css"
+    ]
+  }
+}
