@@ -1,11 +1,6 @@
-const path = require('path');
 const { app, BrowserWindow } = require('electron');
+const path = require('path');
 const isDev = require('electron-is-dev');
-const { default: installExtension, REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } = require('electron-devtools-installer');
-
-
-const MusicStore = require('./src/utils/MusicStore');
-const store = new MusicStore({ name: 'Music Data' });
 
 class AppWindow extends BrowserWindow {
 	static basicConfig = {
@@ -23,7 +18,7 @@ class AppWindow extends BrowserWindow {
 		super(mergedConfig);
 
 		this.loadURL(urlLocation).then(() => {
-			console.log('------------------------------', app.getPath('userData'));
+			console.log(app.getPath('userData'));
 		});
 		this.once('ready-to-show', () => {
 			this.show();
@@ -38,16 +33,6 @@ app.on('ready', () => {
 	if (isDev) mainWindow.openDevTools();
 	releaseWindowWhenClosed(mainWindow);
 });
-
-if (process.env.NODE_ENV === 'development') {
-	app.on('ready', () => {
-		[ REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS ].forEach(extension => {
-      installExtension(extension)
-        .then(name => console.log(`Added Extension: ${name}`))
-        .catch(err => console.log('An error occurred: ', err));
-    });
-	});
-}
 
 function releaseWindowWhenClosed(targetWindow) {
 	targetWindow && targetWindow.on('close', () => targetWindow = null);
