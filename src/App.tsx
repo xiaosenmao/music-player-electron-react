@@ -1,8 +1,15 @@
 import * as React from 'react';
-import './app.scss';
+import Home from './components/Home';
+
+import './reset.scss';
+import './App.scss';
 
 export default class App extends React.Component<{}, {}> {
 	render() {
-		return <div>Music player!</div>;
+		return (
+			<div className='app'>
+				<Home />
+			</div>
+		);
 	}
 }

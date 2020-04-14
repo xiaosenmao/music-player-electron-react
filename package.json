@@ -9,7 +9,7 @@
   "scripts": {
     "build": "cross-env prod=true webpack --config build/webpack.prod.js --colors",
     "dev": "webpack-dev-server --config build/webpack.dev.js --colors",
-    "start": "concurrently \"wait-on http://localhost:8080 && electron .\" \"npm run dev\"",
+    "start": "cross-env NODE_ENV=development concurrently \"wait-on http://localhost:8080 && electron .\" \"npm run dev\"",
     "precommit": "lint-staged"
   },
   "keywords": [
@@ -30,6 +30,7 @@
     "concurrently": "^5.1.0",
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.1",
+    "electron-devtools-installer": "^3.0.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.0.4",
     "lint-staged": "^10.1.2",
@@ -55,7 +56,8 @@
     "electron-is-dev": "^1.1.0",
     "electron-store": "^5.1.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "uuid": "^7.0.3"
   },
   "browserslist": [
     "defaults",

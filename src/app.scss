@@ -1,5 +1,37 @@
-body {
-	#root {
-		background-color: gray;
-	}
+@font-face {font-family: "iconfont";
+  src: url('./resource/fonts/iconfont.eot?t=1586794816359'); /* IE9 */
+  src: url('./resource/fonts/iconfont.eot?t=1586794816359#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAN0AAsAAAAAB4AAAAMoAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqCIIIHATYCJAMUCwwABCAFhG0HSBuTBhEVnEnI/gDx2A6KVDNDD71lcl4374cCL1QW1p5/W8K7AUxAC0gAAAAAgHj42u/13N19kP0BdlAmCSiBQEV16qIqqxpXIzq+ssYQOTbi/7C/fAcoAZoZ/65OagKTEeEqJfdFAVS37hvkHmFQghCMdvh+c7XAxmyEKslVdKBZYeFPaehl0gNh3DnFAdAAASGye/TW/BxswEHgA9k+kE5Ulj2Y+zyX06YlML+dldtay9rUUS/AaAIFugeOSVIgJcoNYxe0xMMEqkUGqJPhsQi0whwViOXM9EToTEhRWLYX2oqFRazCXJ9eoI9g5GXw+fgPWT1Jk5kTzz0JS4H3a/sTVf978Cggns4BtoyMHUAhnla6ljlK7YBR1d/FUah6SfolDvnrqyYxPaFaf3hkRUhECwqNgqPShV9ihyDzC1GqUr9BguD3U1rCcy2kosUpeMhkbXBKSJJYhy19nSwdvWq5kXFLafVC3UOntnDqhXm+IEgepEzNibIpVW/i662QL/kg2cSzqnMK7c2uGDe+ktI3PYLCvRps5aX2D3P7XAnHe5rLtn6PBVZsN/d8s9GWnOJo1Zarj+OHDPy72oIrwm5Cw6VLVfNV13PudSD79cDIzchA3L1um5wld1uGZu9S2v0Hkj435ZSfxq9rUBWxFQHDf6dhAuk12g2Qt2NAXkR/+CXf8ZNse47vvPaUAr5srAcGoeF/YLimPzV38APEHWuKJjXNTVGqHZHiaaybQJXUporX7pt2P41mrnMuoTeXIOksIOttoBbmDjQGDqDVO4Jqu4jlAzNyWJQRbFMPECatIBn3FtmkY2ph3qEx7wWtyTKqK7E2HNiUot2cGLmgouKD2tJZZVtlE+Zfox50zmlpwL4HhzZKaZTks5ew4CmmhNc6E1Gk2Bm6AMdBa0eeXYdSokbE7+JYVT0oKp0ZbUYnRi6oqPigtnRWeY1lU3j/NepB59xAqgreg0PbO6VR0oF6qbKdSLdySnitMxFFip2hC9APWjvy1f06lBI1AxJ+F1v1VFdVtLzGvMAuqCNzw2ZcsqKhycIMoS3Tuc+DWVhU0BDMvM4/RiM=') format('woff2'),
+  url('./resource/fonts/iconfont.woff?t=1586794816359') format('woff'),
+  url('./resource/fonts/iconfont.ttf?t=1586794816359') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./resource/fonts/iconfont.svg?t=1586794816359#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconmusic1:before {
+  content: "\e6f6";
+}
+
+.iconpause:before {
+  content: "\e7e1";
+}
+
+.icondelete:before {
+  content: "\e61f";
+}
+
+.iconplay:before {
+  content: "\e654";
+}
+
+
+.app {
+	margin: 20px 50px;
 }
